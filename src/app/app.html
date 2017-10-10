@@ -1,0 +1,30 @@
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="openPage(registerPage)">
+        <ion-icon name="create"></ion-icon> &nbsp; Register
+      </button>
+      <button ion-item (click)="openPage(profilePage)">
+       <ion-icon name="contact"></ion-icon> &nbsp; Profile
+      </button>
+      <button ion-item (click)="openPage(offerPage)">
+       <ion-icon name="basket"></ion-icon> &nbsp; Add Offers
+      </button>
+       <button ion-item (click)="openPage(beaconConfig)">
+       <ion-icon name="wifi"></ion-icon> &nbsp; Add Beacon Config
+      </button>
+       <button ion-item (click)="openPage(settingsPage)">
+       <ion-icon name="settings"></ion-icon> &nbsp; Settings
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
+
